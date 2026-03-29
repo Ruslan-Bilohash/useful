@@ -1,51 +1,67 @@
 ## GDPR Consent Banner
 
-This project includes a GDPR-compliant cookie consent banner that automatically adapts to the user's language.
+<img src="gdpr.jpg" alt="GDPR Consent Banner Preview" width="800" />
 
-### Features:
-- Automatic language detection based on current page (`index.php`, `ru.php`, `ua.php`, `en.php`)
-- Two buttons: **Accept** and **Reject**
-- If user rejects cookies → shows a non-blocking warning message at the top
-- Option to **accept cookies again** from the warning message
-- Consent choice is saved in `localStorage`
-- Fully responsive and accessible
+This project features a modern, GDPR-compliant cookie consent banner that automatically adapts to the visitor's language.
 
-### Supported languages:
-- **Lithuanian (LT)**
-- **Russian (RU)**
-- **Ukrainian (UK)**
-- **English (EN)**
+### ✨ Features
+- Automatic language detection based on the current page (`index.php`, `ru.php`, `ua.php`, `en.php`)
+- Clear **Accept** and **Reject** buttons
+- If the user rejects cookies, a non-blocking amber warning message appears at the top
+- Option to **accept cookies again** directly from the warning banner
+- User preference is saved in `localStorage`
+- Fully responsive and accessible design
+- Clean, modern UI that matches the website style
 
-### Files:
+### 🌍 Supported Languages
+- **Lithuanian (LT)** — Lietuvių
+- **Russian (RU)** — Русский
+- **Ukrainian (UK)** — Українська
+- **English (EN)** — English
+- **Norwegian (NO)** — Norsk
+
+### 📁 Files
 - `gdpr-consent.php` — main consent banner component
-- Integrated into all language versions of the site
+- Integrated into all language versions of the site (`index.php`, `ru.php`, `ua.php`, `en.php`)
 
 ### How it works:
-When a user visits the site for the first time, a consent banner appears at the bottom.  
-If the user clicks **"Reject"**, a warning message appears at the top explaining that some features may not work correctly, with the ability to accept cookies again at any time.
+When a user visits the site for the first time, a consent banner appears at the bottom of the screen.
 
-The banner respects user privacy and follows GDPR best practices.
+- Clicking **"Accept"** hides the banner and saves the preference.
+- Clicking **"Reject"** hides the banner and shows a warning message at the top of the page, informing the user that some features may not work correctly.
+- The user can click **"Accept cookies again"** in the warning message to change their decision at any time.
 
-## GDPR Consent Banner
+The banner fully respects user privacy and follows GDPR best practices.
 
-This project includes a GDPR-compliant cookie consent banner that automatically adapts to the user's language.
+---
 
-### Features:
-- Automatic language detection based on the current page
-- Buttons: **Accept** and **Reject**
-- If rejected — shows a non-blocking warning message at the top
-- Option to **accept cookies again** at any time
-- Consent choice is saved in `localStorage`
+## GDPR-samtykkebanner (Norsk)
 
-### Supported languages:
-- Lithuanian (LT)
-- Russian (RU)
-- Ukrainian (UK)
-- English (EN)
+<img src="gdpr.jpg" alt="GDPR Consent Banner Preview" width="800" />
 
-- ## GDPR Банер згоди
+Dette prosjektet inkluderer et moderne GDPR-kompatibelt samtykkebanner for informasjonskapsler som automatisk tilpasser seg brukerens språk.
 
-Проект використовує GDPR-сумісний банер згоди на використання файлів cookie, який автоматично адаптується під мову користувача.
+### Funksjoner:
+- Automatisk språkdeteksjon basert på gjeldende side
+- Klare knapper: **Godta** og **Avslå**
+- Ved avslag vises et ikke-blokkerende varsel øverst på siden
+- Mulighet til å **godta informasjonskapsler igjen** når som helst
+- Valget lagres i `localStorage`
+
+### Støttede språk:
+- Litauisk (LT)
+- Russisk (RU)
+- Ukrainsk (UK)
+- Engelsk (EN)
+- Norsk (NO)
+
+---
+
+## GDPR Банер згоди (Українська)
+
+<img src="gdpr.jpg" alt="GDPR Consent Banner Preview" width="800" />
+
+Проект використовує сучасний GDPR-сумісний банер згоди на використання файлів cookie, який автоматично адаптується під мову користувача.
 
 ### Можливості:
 - Автоматичне визначення мови сторінки
@@ -59,10 +75,15 @@ This project includes a GDPR-compliant cookie consent banner that automatically 
 - Російська (RU)
 - Українська (UK)
 - Англійська (EN)
+- Норвезька (NO)
 
-- ## GDPR Баннер согласия
+---
 
-Проект использует GDPR-совместимый баннер согласия на использование файлов cookie, который автоматически адаптируется под язык пользователя.
+## GDPR Баннер согласия (Русский)
+
+<img src="gdpr.jpg" alt="GDPR Consent Banner Preview" width="800" />
+
+Проект использует современный GDPR-совместимый баннер согласия на использование файлов cookie, который автоматически адаптируется под язык пользователя.
 
 ### Возможности:
 - Автоматическое определение языка страницы
@@ -76,3 +97,4 @@ This project includes a GDPR-compliant cookie consent banner that automatically 
 - Русский (RU)
 - Украинский (UK)
 - Английский (EN)
+- Норвежский (NO)
