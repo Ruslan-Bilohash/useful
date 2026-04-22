@@ -1,0 +1,70 @@
+<!-- ========== МАЛИЙ КРУГЛИЙ LANGUAGE SWITCHER + ВЕРТИКАЛЬНЕ МЕНЮ ========== -->
+<div id="langSwitcher" 
+     onclick="toggleLangMenu()" 
+     class="fixed bottom-6 left-6 z-[9999] w-16 h-16 bg-white shadow-2xl border border-zinc-200 rounded-full flex items-center justify-center cursor-pointer hover:scale-110 active:scale-95 transition-all duration-300">
+
+    <div class="flex flex-col items-center">
+        <span id="currentFlag" class="text-4xl leading-none"></span>
+        <span id="currentLangCode" class="text-[10px] font-bold text-zinc-700 tracking-widest -mt-1"></span>
+    </div>
+</div>
+
+<!-- ВЕРТИКАЛЬНЕ МЕНЮ -->
+<div id="langMenu" class="hidden fixed bottom-24 left-6 bg-white shadow-2xl border border-zinc-200 rounded-3xl p-3 z-[10000]">
+    <div class="flex flex-col gap-3">
+        <span onclick="changeLanguage('UA')" class="text-4xl cursor-pointer hover:scale-125 transition flex justify-center">🇺🇦</span>
+        <span onclick="changeLanguage('EN')" class="text-4xl cursor-pointer hover:scale-125 transition flex justify-center">🇬🇧</span>
+        <span onclick="changeLanguage('NO')" class="text-4xl cursor-pointer hover:scale-125 transition flex justify-center">🇳🇴</span>
+        <span onclick="changeLanguage('RU')" class="text-4xl cursor-pointer hover:scale-125 transition flex justify-center">🇷🇺</span>
+        <span onclick="changeLanguage('LT')" class="text-4xl cursor-pointer hover:scale-125 transition flex justify-center">🇱🇹</span>
+        <span onclick="changeLanguage('SV')" class="text-4xl cursor-pointer hover:scale-125 transition flex justify-center">🇸🇪</span>
+        <span onclick="changeLanguage('PL')" class="text-4xl cursor-pointer hover:scale-125 transition flex justify-center">🇵🇱</span>
+        <span onclick="changeLanguage('DE')" class="text-4xl cursor-pointer hover:scale-125 transition flex justify-center">🇩🇪</span>
+    </div>
+</div>
+
+<script>
+    const languages = [
+        { code: "UA", flag: "🇺🇦", file: "ua.html" },
+        { code: "EN", flag: "🇬🇧", file: "en.html" },
+        { code: "NO", flag: "🇳🇴", file: "no.html" },
+        { code: "RU", flag: "🇷🇺", file: "ru.html" },
+        { code: "LT", flag: "🇱🇹", file: "lt.html" },
+        { code: "SV", flag: "🇸🇪", file: "sv.html" },
+        { code: "PL", flag: "🇵🇱", file: "pl.html" },
+        { code: "DE", flag: "🇩🇪", file: "de.html" }
+    ];
+
+    let currentIndex = 0;
+
+    function updateSwitcher() {
+        document.getElementById("currentFlag").textContent = languages[currentIndex].flag;
+        document.getElementById("currentLangCode").textContent = languages[currentIndex].code;
+    }
+
+    function nextLanguage() {
+        currentIndex = (currentIndex + 1) % languages.length;
+        updateSwitcher();
+    }
+
+    function startAutoSwitch() {
+        setInterval(nextLanguage, 2500);
+    }
+
+    function toggleLangMenu() {
+        document.getElementById("langMenu").classList.toggle("hidden");
+    }
+
+    function changeLanguage(code) {
+        const lang = languages.find(item => item.code === code);
+        if (lang) {
+            window.location.href = lang.file;
+        }
+    }
+
+    window.onload = function() {
+        updateSwitcher();
+        startAutoSwitch();
+    };
+</script>
+<!-- ========== КІНЕЦЬ КРУГЛОГО SWITCHER ========== -->
